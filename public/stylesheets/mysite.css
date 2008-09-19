@@ -1,0 +1,152 @@
+body {
+    margin: 0  0 1em 0;
+    padding: 0;
+    font-family: 'Lucida Grande', Helvetica, sans-serif;
+	background: #292929;
+	color: #ccc;
+	min-width: 725px;
+}
+form { margin: 0; }
+img { border: 0; }
+/*#pagewrapper {
+    width: 900px;
+    margin: 10px auto;
+    padding: 0;
+    border: 1px solid #999;
+    font-family: Helvetica, sans-serif;
+}
+#content {
+    padding: 20px 10px;
+}*/
+#footer {
+    background-color: #5A6B77;
+    padding-top: 6px;
+    padding-bottom: 6px;
+	margin-top: 1em;
+    clear:both;
+    border-top: 2px solid #333;
+    text-align: center;
+}
+#footer p, #footer a {
+    text-align: center;
+    font-size: 12px;
+    color: #ccc;
+    font-weight:bold;
+    margin: 0;
+    padding: 2px;
+}
+
+#header { padding: 0 50px; }
+#header ul { right: 0; } 
+* html #header ul { right: 50px; } 
+
+#header div, #content, #breadcrumbs div, #footer-contents, #main-feature .feature-contents {
+	max-width: 900px; margin: 0 auto;
+}
+
+#header div { position: relative; }
+
+/* header */
+
+#header {
+	height: 38px;
+	position: relative;
+	border-bottom: 1px solid #A1A6B1;
+	background: #5b7876;
+	z-index: 1;
+}
+
+#header h1 { margin: 0;	}
+
+#header h1 img {
+	font-weight: bold;
+	color: #7f7c45;
+}
+
+#header ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	border-left: 1px solid #576178;
+	border-right: 1px solid #1f2635;
+	position: absolute;
+	top: 0;
+}
+
+#header li {
+	float: left;
+	padding: 0;
+	margin: 0;
+}
+
+#header ul span, #header ul a:link, #header ul a:visited {
+	display: block;
+	float: left;
+	padding: 10px 15px;
+	text-decoration: none;
+	border-right: 1px solid #576178;
+	border-left: 1px solid #1f2635;
+	color: #dee0e5;
+	height: 36px;
+	voice-family: "\"}\"";
+	voice-family: inherit;
+	height: 16px;
+} #ignored {}
+
+#header ul li span,
+#header ul li a.current,
+#header ul li a:hover {
+	background: #475470;
+	color: #fff;
+	text-decoration: underline;
+}
+
+#header ul li span,
+#header ul li a.current {
+	text-decoration: none;
+}
+#header #current a {
+	background-color: #475470;
+}
+#nav-access {
+	display: none;
+}
+#subnav {
+	position: absolute;
+    left: -260px;
+	float: left;
+	border-right: 1px solid black;
+	padding-right: 20px;
+}
+#subnav ul {
+	list-style: none;
+}
+
+#content {
+        width: 420px;
+                margin: auto;
+                position: relative;
+}
+
+
+#both {
+	clear: both;
+}
+ div#content ul.description {
+        position: absolute;
+        right: -170px;
+        width: 160px;
+        text-align: right;
+        list-style: none;
+    }
+
+a, a:active { /* link formatting  <a href="#"> - for clickable links */
+	text-decoration: none; /* no underline of links */
+	color: #f2e6b6; /* link color */
+	font-weight: bold; /* bold font links */
+}
+
+a:hover, a:focus { /* link formatting  <a href="#"> - when you hover over a link what happens */
+	text-decoration: none; /* no underline of links */
+	color: #5b7876; /* what color should the link font turn */
+}

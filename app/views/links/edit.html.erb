@@ -1,0 +1,14 @@
+<h1>Editing link</h1>
+
+<%= error_messages_for :link %>
+
+<% form_for(@link) do |f| %>
+  <%= render :partial => 'form', :locals => {:f => f} %>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @link %> |
+<%= link_to 'Back', links_path %>

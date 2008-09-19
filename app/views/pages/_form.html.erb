@@ -1,0 +1,48 @@
+<p>
+  <b>Name</b><br />
+  <%= f.text_field :name %>
+</p>
+
+<p>
+  <b>Title</b><br />
+  <%= f.text_field :title %>
+</p>
+
+<p>
+  <b>Body</b><br />
+  <%= f.text_area :body %>
+</p>
+
+<p>
+	<b>Admin?</b><br />
+    <%= f.check_box :admin %>
+</p>
+
+<p>
+	<%= f.collection_select :parent_id, Page.find(:all), :id, :title, :include_blank => true %>
+</p>
+
+<p>
+	<b>Position</b><br />
+	<%= f.text_field :position, :size => '3' %>
+</p>
+
+<p>
+	<b>Nav Label</b><br />
+	<%= f.text_field :navlabel %>
+</p>
+
+<p>
+	<b>redirect?</b><br />
+	<%= f.check_box :redirect %>
+</p>
+
+<p>
+	<b>action</b><br />
+	<%= f.text_field :action_name %>
+</p>
+
+<p>
+	<b>controller</b><br />
+	<%= f.text_field :controller_name %>
+</p>

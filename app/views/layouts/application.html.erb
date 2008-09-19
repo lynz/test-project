@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title><%= @pagetitle %></title>
+		<%= stylesheet_link_tag 'mysite', 'scaffold' %>
+		<%= javascript_include_tag :defaults %>
+  </head>
+  <body id="home">	
+<!-- start #header -->
+  <div id="header">
+		<div>
+      <a href="/" title="Back to home page"><%= link_to image_tag("lindsay_t.png", :border => 0) %></a>
+  	
+<!-- start #nav-main -->
+<ul id="nav-main">
+	<% @tabs.each do |page| -%>
+		<li <%= "id='current'" if @page && @page == page %>>
+		<% if page.redirect? %>
+			<%= link_to page.navlabel, :action => page.action_name, :controller => page.controller_name, :name => page.name %>
+		<% else %>
+			<%= link_to page.navlabel, view_page_path(page.name) %>
+		<% end %>
+		</li>
+	<% end -%>
+	<li><% if logged_in? %>
+		<%= link_to "log out", logout_path %>
+	<% else %>
+		<%= link_to "login", login_path %>
+	<% end %>
+	</li>
+</ul>  
+<!-- end #nav-main -->
+		</div>
+  	<hr>
+  </div>
+  <!-- end #header -->
+		<div id='content'>
+			<h2><%= flash[:notice] %></h2>
+      <%= yield %>
+		</div>
+		
+		<div id='footer'>
+			<p>Copyright &copy; <%= DateTime.now.year -%> lindsay</p>
+		</div>
+  </body>
+</html>
